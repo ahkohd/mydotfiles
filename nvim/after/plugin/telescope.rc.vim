@@ -15,7 +15,7 @@ local actions = require('telescope.actions')
 
 telescope.setup{
   defaults = {
-    file_ignore_patterns = { ".git/.*", "node_modules/.*", "vendor/.*", ".next/.*", "target/debug/.*", "target/release/.*" },
+    file_ignore_patterns = { ".git/.*", "node_modules/.*", "vendor/.*", ".next/.*", "target/debug/.*", "target/release/.*", "src-tauri/target/.*", "dist/.*"},
     mappings = {
       n = {
         ["q"] = actions.close
