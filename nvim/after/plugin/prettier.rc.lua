@@ -10,7 +10,8 @@ null_ls.setup({
     if client.resolved_capabilities.document_formatting then
       vim.cmd("nnoremap <silent><buffer> <Leader>f :lua vim.lsp.buf.formatting()<CR>")
       -- format on save
-      vim.cmd("autocmd BufWritePost <buffer> lua vim.lsp.buf.formatting()")
+      -- vim.cmd("autocmd BufWritePost <buffer> lua vim.lsp.buf.formatting()")
+      vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()")
     end
 
     if client.resolved_capabilities.document_range_formatting then
