@@ -166,6 +166,7 @@ nmap <Leader>f <Plug>(prettier-format)
 nmap <Leader>. :CodeActionMenu<Enter> 
 " toggle nvim treee
 nmap <c-b> :NvimTreeToggle<Enter>
+nmap <c-p> :TroubleToggle<Enter>
 " -------------------------------------------------------------------------
 
 

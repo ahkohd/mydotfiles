@@ -43,6 +43,10 @@ if has("nvim")
   Plug 'kyazdani42/nvim-tree.lua'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+  Plug 'ahmedkhalf/project.nvim'
+  Plug 'nvim-telescope/telescope-project.nvim'
+  Plug 'nvim-telescope/telescope-file-browser.nvim'
+  Plug 'akinsho/toggleterm.nvim', {'tag': 'v1.*'}
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }

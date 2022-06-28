@@ -13,6 +13,8 @@ end
 local telescope = require('telescope')
 local actions = require('telescope.actions')
 
+telescope.load_extension('projects')
+
 telescope.setup{
   defaults = {
     file_ignore_patterns = { ".git/.*", "node_modules/.*", "vendor/.*", ".next/.*", "target/debug/.*", "target/release/.*", "src-tauri/target/.*", "dist/.*"},
@@ -23,4 +25,12 @@ telescope.setup{
     },
   }
 }
+
+vim.api.nvim_set_keymap(
+    'n',
+    '<C-p>',
+    ":lua require'telescope'.extensions.project.project{}<CR>",
+    {noremap = true, silent = true}
+)
+
 EOF
