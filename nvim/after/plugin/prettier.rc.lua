@@ -8,7 +8,7 @@ null_ls.setup({
     },
   on_attach = function(client, bufnr)
     if client.resolved_capabilities.document_formatting then
-      vim.cmd("nnoremap <silent><buffer> <Leader>f :lua vim.lsp.buf.formatting()<CR>")
+      vim.cmd("nnoremap <silent><buffer> <Leader>f :lua vim.lsp.buf.formatting_seq_sync()<CR>")
       -- format on save
       -- vim.cmd("autocmd BufWritePost <buffer> lua vim.lsp.buf.formatting()")
       vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()")
