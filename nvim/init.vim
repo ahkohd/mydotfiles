@@ -166,7 +166,12 @@ nmap <Leader>f <Plug>(prettier-format)
 nmap <Leader>. :CodeActionMenu<Enter> 
 " toggle nvim treee
 nmap <c-b> :NvimTreeToggle<Enter>
-nmap <c-p> :TroubleToggle<Enter>
+nmap <c-K> :TroubleToggle<Enter>
+" Remap vim-smoothie c-d, c-u to pageUp & pageDown 
+nnoremap <Up> <cmd>call smoothie#do("\<C-U>") <CR>
+vnoremap <PageUp> <cmd>call smoothie#do("\<C-U>") <CR>
+nnoremap <Down> <cmd>call smoothie#do("\<C-D>") <CR>
+vnoremap <PageDown> <cmd>call smoothie#do("\<C-D>") <CR>
 " -------------------------------------------------------------------------
 
 
