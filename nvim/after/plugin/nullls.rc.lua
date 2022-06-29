@@ -22,8 +22,9 @@ null_ls.setup({
   end,
 })
 
+-- prettier setup
 prettier.setup({
-  bin = 'prettier', -- or `prettierd`
+  bin = 'prettierd', -- or `prettierd`
   filetypes = {
     "css",
     "graphql",

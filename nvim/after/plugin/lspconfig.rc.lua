@@ -140,13 +140,7 @@ nvim_lsp.flow.setup {
 }
 
 nvim_lsp.tsserver.setup {
-  on_attach = function(client, bufnr)
-        -- disable ts server formattin since we're going to use nullls
-        client.resolved_capabilities.document_formatting = false
-        client.resolved_capabilities.document_range_formatting = false
-
-        on_attach(client, bufnr)
-    end,
+  on_attach = on_attach,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
   capabilities = capabilities,
 }
