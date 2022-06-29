@@ -12,6 +12,12 @@ lua <<EOF
         require('luasnip').lsp_expand(args.body)
       end,
     },
+    sorting = {
+      priority_weight = 2,
+      comparators = {
+        cmp.score,
+      },
+    },
     mapping = cmp.mapping.preset.insert({
       ['<C-d>'] = cmp.mapping.scroll_docs(-4),
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
@@ -29,7 +35,7 @@ lua <<EOF
     }),
     formatting = {
       format = lspkind.cmp_format({with_text = false, maxwidth = 50})
-    }
+    },
   })
 
   vim.cmd [[highlight! default link CmpItemKind CmpItemMenuDefault]]

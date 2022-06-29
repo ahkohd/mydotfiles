@@ -178,3 +178,5 @@ vnoremap <PageDown> <cmd>call smoothie#do("\<C-D>") <CR>
 " dracula theme setup :p...
 let g:dracula_transparent_bg = v:true
 colorscheme dracula
+
+let g:disable_lsp_client = v:true

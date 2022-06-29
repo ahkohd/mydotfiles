@@ -29,7 +29,6 @@ if has("nvim")
   Plug 'windwp/nvim-autopairs'
   Plug 'ur4ltz/surround.nvim'
   Plug 'windwp/nvim-ts-autotag'
-  Plug 'mfussenegger/nvim-dap'
   Plug 'Mofiqul/dracula.nvim'
   Plug 'MunifTanjim/prettier.nvim'
   Plug 'jose-elias-alvarez/null-ls.nvim'
@@ -41,12 +40,18 @@ if has("nvim")
   Plug 'weilbith/nvim-code-action-menu'
   Plug 'psliwka/vim-smoothie'
   Plug 'kyazdani42/nvim-tree.lua'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  " Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
   Plug 'ahmedkhalf/project.nvim'
   Plug 'nvim-telescope/telescope-project.nvim'
   Plug 'nvim-telescope/telescope-file-browser.nvim'
   Plug 'akinsho/toggleterm.nvim', {'tag': 'v1.*'}
+  Plug 'tpope/vim-commentary'
+  Plug 'mhinz/vim-startify'
+  " Plug 'nvim-lua/lsp_extensions.nvim'
+  Plug 'simrat39/rust-tools.nvim'
+  Plug 'mfussenegger/nvim-dap'
+  Plug 'nvim-telescope/telescope-ui-select.nvim'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }

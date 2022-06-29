@@ -3,10 +3,12 @@ local prettier = require("prettier")
 
 null_ls.setup({
   sources = {
-        null_ls.builtins.diagnostics.eslint,
+        null_ls.builtins.diagnostics.eslint.with({
+            prefer_local = "node_modules/.bin",
+        }),
         null_ls.builtins.code_actions.eslint,
     },
-  on_attach = function(client, bufnr)
+  on_attach = function(client)
     if client.resolved_capabilities.document_formatting then
       vim.cmd("nnoremap <silent><buffer> <Leader>f :lua vim.lsp.buf.formatting_seq_sync()<CR>")
       -- format on save
