@@ -54,6 +54,7 @@ if has("nvim")
   Plug 'nvim-telescope/telescope-ui-select.nvim'
   " Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
   Plug 'romgrk/barbar.nvim'
+  Plug 'github/copilot.vim'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }

@@ -1,7 +1,7 @@
 if !exists('g:loaded_telescope') | finish | endif
 
-nnoremap  <silent> ;f <cmd>lua require('telescope.builtin').find_files()<cr>
-nnoremap  <silent> ;r <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <silent> ;f <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <silent> ;r <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <silent> \\ <cmd>Telescope buffers<cr>
 nnoremap <silent> ;; <cmd>Telescope help_tags<cr>
 
@@ -12,6 +12,8 @@ end
 
 local telescope = require('telescope')
 local actions = require('telescope.actions')
+local previewers = require('telescope.previewers')
+local previewers_utils = require('telescope.previewers.utils')
 
 telescope.load_extension('projects')
 telescope.load_extension("ui-select")
