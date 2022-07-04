@@ -16,3 +16,15 @@ Hydra({
       { 's', '2<C-w>-', { desc = "Decrease Height"} },
    }
 })
+
+Hydra({
+  name = 'Tabs navigation',
+  mode = 'n',
+  body = 't',
+  heads = {
+    {'<Left>', '<Cmd>BufferPrevious<CR>', { desc = "Goto Previous tab" } },
+    {'<Right>', '<Cmd>BufferNext<CR>', { desc = "Goto Next tab"} },
+    {'<a>', '<Cmd>BufferMovePrevious<CR>', { desc = "Move to prev"} },
+    {'<d>', '<Cmd>BufferMoveNext<CR>', { desc = "Move to next"} }
+  }
+})
