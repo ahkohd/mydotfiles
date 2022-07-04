@@ -34,7 +34,6 @@ if has("nvim")
   Plug 'jose-elias-alvarez/null-ls.nvim'
   Plug 'Pocco81/AutoSave.nvim'
   Plug 'folke/trouble.nvim'
-  Plug 'mhinz/vim-signify'
   Plug 'tpope/vim-fugitive'
   Plug 'junegunn/gv.vim'
   Plug 'weilbith/nvim-code-action-menu'
@@ -57,6 +56,9 @@ if has("nvim")
   Plug 'github/copilot.vim'
   Plug 'hrsh7th/cmp-path'
   Plug 'anuvyklack/hydra.nvim'
+  Plug 'lewis6991/gitsigns.nvim'
+  Plug 'TimUntersberger/neogit'
+  Plug 'anuvyklack/keymap-layer.nvim'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
