@@ -157,7 +157,7 @@ set exrc
 " ------------------------------------------------------------------------
 inoremap kk <Esc>
 set nu rnu
-nnoremap <C-Tab> <C-w>w
+nmap <Leader>z <C-w>w
 " range_formatting in visual mode
 xmap <Leader>f <Plug>(prettier-format)
 " formatting in normal mode
