@@ -56,6 +56,7 @@ if has("nvim")
   Plug 'romgrk/barbar.nvim'
   Plug 'github/copilot.vim'
   Plug 'hrsh7th/cmp-path'
+  Plug 'anuvyklack/hydra.nvim'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
