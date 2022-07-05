@@ -167,6 +167,7 @@ nmap <Leader>. :CodeActionMenu<Enter>
 " toggle nvim treee
 nmap <c-b> :NvimTreeToggle<Enter>
 nmap <c-K> :TroubleToggle<Enter>
+nmap <c-G> :Neogit<Enter>
 " Remap vim-smoothie c-d, c-u to pageUp & pageDown 
 nnoremap <Up> <cmd>call smoothie#do("\<C-U>") <CR>
 vnoremap <PageUp> <cmd>call smoothie#do("\<C-U>") <CR>

@@ -62,6 +62,11 @@ I write about my neovim keybindings.
 * n: <kbd>ctrl</kbd><kbd>j</kbd> show code diagnostic problems popup
 * i: <kbd>ctrl</kbd><kbd>space</kbd> show code completion dropdown 
 
+## [Neogit](https://github.com/TimUntersberger/neogit)
+* n: <kbd>ctrl</kbd><kbd>g</kbd> open neogit
+
+See neogit [docs.](https://github.com/TimUntersberger/neogit)
+
 ### [Trouble](https://github.com/folke/trouble.nvim)
 * n: <kbd>ctrl</kbd><kbd>k</kbd> toggle, show all diagnostic problems in a bottom panel
 
