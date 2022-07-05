@@ -59,6 +59,7 @@ if has("nvim")
   Plug 'lewis6991/gitsigns.nvim'
   Plug 'TimUntersberger/neogit'
   Plug 'anuvyklack/keymap-layer.nvim'
+  Plug 'sindrets/diffview.nvim'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
