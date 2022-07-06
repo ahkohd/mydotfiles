@@ -62,6 +62,7 @@ if has("nvim")
   Plug 'sindrets/diffview.nvim'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'Yggdroot/indentLine'
+  Plug 'akinsho/git-conflict.nvim'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }

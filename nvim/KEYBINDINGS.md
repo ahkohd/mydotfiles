@@ -65,6 +65,10 @@ I write about my neovim keybindings.
 ## [Neogit](https://github.com/TimUntersberger/neogit)
 * n: <kbd>ctrl</kbd><kbd>g</kbd> open neogit
 
+## [git-conflict.nvim](https://github.com/akinsho/git-conflict.nvim)
+See [docs](https://github.com/akinsho/git-conflict.nvim) for usage.
+
+
 See neogit [docs.](https://github.com/TimUntersberger/neogit)
 
 ### [Trouble](https://github.com/folke/trouble.nvim)
