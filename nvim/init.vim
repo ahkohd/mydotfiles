@@ -175,6 +175,8 @@ nnoremap <Down> <cmd>call smoothie#do("\<C-D>") <CR>
 vnoremap <PageDown> <cmd>call smoothie#do("\<C-D>") <CR>
 " -------------------------------------------------------------------------
 
+set list!
+set listchars=tab:→\ ,trail:·,extends:\#,nbsp:.,eol:↵
 
 " dracula theme setup :p...
 let g:dracula_transparent_bg = v:true

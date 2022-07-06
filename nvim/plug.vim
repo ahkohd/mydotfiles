@@ -61,6 +61,7 @@ if has("nvim")
   Plug 'anuvyklack/keymap-layer.nvim'
   Plug 'sindrets/diffview.nvim'
   Plug 'editorconfig/editorconfig-vim'
+  Plug 'Yggdroot/indentLine'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
