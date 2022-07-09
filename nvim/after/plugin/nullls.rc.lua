@@ -3,11 +3,17 @@ local prettier = require("prettier")
 
 null_ls.setup({
   sources = {
-        null_ls.builtins.diagnostics.eslint.with({
-            prefer_local = "node_modules/.bin",
-        }),
-        null_ls.builtins.code_actions.eslint,
-    },
+    null_ls.builtins.diagnostics.eslint.with({
+      prefer_local = "node_modules/.bin",
+    }),
+    null_ls.builtins.code_actions.eslint,
+    null_ls.builtins.formatting.prettier,
+    null_ls.builtins.formatting.stylua,
+    null_ls.builtins.code_actions.gitsigns,
+    null_ls.builtins.code_actions.shellcheck,
+    null_ls.builtins.formatting.rustfmt,
+    null_ls.builtins.completion.luasnip,
+  },
   on_attach = function(client)
     if client.resolved_capabilities.document_formatting then
       vim.cmd("nnoremap <silent><buffer> <Leader>f :lua vim.lsp.buf.formatting_seq_sync()<CR>")
@@ -24,7 +30,7 @@ null_ls.setup({
 
 -- prettier setup
 prettier.setup({
-  bin = 'prettierd', -- or `prettierd`
+  bin = "prettierd", -- or `prettierd`
   filetypes = {
     "css",
     "graphql",
@@ -38,9 +44,7 @@ prettier.setup({
     "typescript",
     "typescriptreact",
     "yaml",
-    "rust",
   },
-
   -- prettier format options (you can use config files too. ex: `.prettierrc`)
   arrow_parens = "always",
   bracket_spacing = true,
