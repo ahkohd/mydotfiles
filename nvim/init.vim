@@ -155,7 +155,7 @@ set exrc
 
 " Victor's custom key bindings...
 " ------------------------------------------------------------------------
-inoremap kk <Esc>
+" inoremap kk <Esc>
 set nu rnu
 nmap <Leader>z <C-w>w
 " range_formatting in visual mode
