@@ -113,6 +113,8 @@ nvim_lsp.vimls.setup{
   capabilities = capabilities
 }
 
+-- Note: don't use lspinstaller sumneko_lua, use brew install lua-language-server instead
+
 nvim_lsp.sumneko_lua.setup {
   on_attatch = on_attach,
   capabilities = capabilities,
@@ -134,7 +136,11 @@ nvim_lsp.sumneko_lua.setup {
   },
 }
 
-nvim_lsp.cssls.setup{}
+-- Note: don't use lspinstall cssls, instead use npm i -g vscode-langservers-extracted
+nvim_lsp.cssls.setup{
+  on_attach = on_attach,
+  capabilities = capabilities
+}
 
 nvim_lsp.flow.setup {
   on_attach = on_attach,
