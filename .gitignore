@@ -8,4 +8,5 @@
 # Allow directories
 !nvim/**/*
 !alacritty/**/*
+!wezterm/**/*
 !tmux/**/*
