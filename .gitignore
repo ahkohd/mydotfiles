@@ -4,6 +4,8 @@
 
 # Allow files
 !.gitignore
+!README.md
+!depoly.nu
 
 # Allow directories
 !nvim/**/*
