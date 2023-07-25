@@ -1,0 +1,10 @@
+# Ignore 
+*/*
+*.*
+
+# Allow files
+!.gitignore
+
+# Allow directories
+!nvim/**/*
+!alacritty/**/*
