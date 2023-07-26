@@ -10,6 +10,6 @@ if ($config_path | path exists) {
   git commit -m "feat: initial commit"
   git remote add origin git@github.com:ahkohd/mydotfiles.git
   git pull origin main --rebase
-  cd nu
+  cd nushell
   nu deploy.nu
 }
