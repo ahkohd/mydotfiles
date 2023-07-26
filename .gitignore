@@ -12,4 +12,4 @@
 !alacritty/**/*
 !wezterm/**/*
 !tmux/**/*
-!nu/**/*
+!nushell/**/*
