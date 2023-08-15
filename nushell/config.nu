@@ -297,7 +297,7 @@ let light_theme = {
 
 
 # The default config record. This is where much of your global configuration is setup.
-let-env config = {
+$env.config = {
   ls: {
     use_ls_colors: true # use the LS_COLORS environment variable to colorize output
     clickable_links: true # enable or disable clickable links. Your terminal has to support links.
@@ -661,13 +661,13 @@ let-env config = {
 
 # Prompt
 source ~/.cache/starship/init.nu
-let-env PROMPT_INDICATOR = ""
-let-env PROMPT_INDICATOR_VI_INSERT = ""
-let-env PROMPT_INDICATOR_VI_NORMAL = ""
-let-env PROMPT_MULTILINE_INDICATOR = " . "
+$env.PROMPT_INDICATOR = ""
+$env.PROMPT_INDICATOR_VI_INSERT = ""
+$env.PROMPT_INDICATOR_VI_NORMAL = ""
+$env.PROMPT_MULTILINE_INDICATOR = " . "
 
 # Envs
-let-env TERM = "alacritty"
+$env.TERM = "alacritty"
 
 # Aliases
 alias nv = neovide
@@ -702,4 +702,4 @@ alias cTmux = vi ~/.config/tmux/tmux.conf
 alias cWezterm = vi ~/.config/wezterm/wezterm.lua
 
 # PATH
-let-env PATH = ($env.PATH | append "/usr/local/bin")
+$env.PATH = ($env.PATH | append "/usr/local/bin")
