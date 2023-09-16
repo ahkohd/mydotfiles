@@ -3,13 +3,11 @@
 -- Set various options
 vim.o.termguicolors = true
 vim.o.background = "dark"
-vim.o.nocompatible = true
 vim.wo.number = true
 vim.o.fileencodings = "utf-8,sjis,euc-jp,latin"
 vim.o.encoding = "utf-8"
 vim.o.title = true
 vim.o.autoindent = true
-vim.o.nobackup = true
 vim.o.hlsearch = true
 vim.o.showcmd = true
 vim.o.cmdheight = 0
