@@ -26,20 +26,6 @@ I write about my neovim keybindings.
 - n: <kbd>\\</kbd><kbd>\\</kbd> show all buffers (open editors)
 - n: <kbd>ctrl</kbd><kbd>o</kbd> open projects popover modal
 
-### Prettier
-
-- n: <kbd>\\</kbd><kbd>f</kbd> format file with prettier
-
-### [BarBar](https://github.com/romgrk/barbar.nvim)
-
-- n: <kbd>\\</kbd><kbd>0-9</kbd> goto tab 0-9 _i.e type <kbd>\\</kbd><kbd>2</kbd>, goto tab 2_
-- n: <kbd>\\</kbd><kbd>-</kbd> close current tab
-- n: <kbd>\\</kbd><kbd>t</kbd> pin current tab
-- h: <kbd>t</kbd><kbd>Right</kbd> goto next tab
-- h: <kbd>t</kbd><kbd>Left</kbd> goto prev tab
-- h: <kbd>t</kbd><kbd>a</kbd> move tab left
-- h: <kbd>t</kbd><kbd>d</kbd> move tab right
-
 ### Editors
 
 - h: <kbd>z</kbd><kbd>Left</kbd> goto left editor
@@ -54,10 +40,6 @@ I write about my neovim keybindings.
 ### [NeovimBar](https://github.com/romgrk/barbar.nvim)
 
 - n: <kbd>ctrl</kbd><kbd>b</kbd> toggle file explorer bar
-
-### [Symbols outline](https://github.com/simrat39/symbols-outline.nvim)
-
-- n: <kbd>ctrl</kbd><kbd>s</kbd> toggle symbols outline view
 
 ### [ToggleTerm](https://github.com/akinsho/toggleterm.nvim)
 
@@ -90,10 +72,6 @@ See [docs](https://github.com/akinsho/git-conflict.nvim) for usage.
 
 See neogit [docs.](https://github.com/TimUntersberger/neogit)
 
-### [Trouble](https://github.com/folke/trouble.nvim)
-
-- n: <kbd>ctrl</kbd><kbd>k</kbd> toggle, show all diagnostic problems in a bottom panel
-
 ### [Surround](https://github.com/ur4ltz/surround.nvim)
 
 Surround text, text selection with a character i.e apostrophe.
@@ -112,10 +90,6 @@ In normal mode type `:mark`<kbd>Tab</kbd> to see all markdown preview commands.
 
 See [docs](https://github.com/iamcco/markdown-preview.nvim) for more usage info.
 
-### [Auto save](https://github.com/Pocco81/AutoSave.nvim)
-
-In normal mode type `:as`<kbd>Tab</kbd> to see all auto save commands.
-
 ### Browse all keymaps (w/ Telescope)
 
 Press <kbd>F2</kbd> while in normal mode
@@ -124,13 +98,8 @@ Press <kbd>F2</kbd> while in normal mode
 
 Press <kbd>/</kbd><kbd>d</kbd> while in normal mode to open debugger sub mode
 
-### Lazygit
-
-Press <kbd>/</kbd><kbd>h</kbd> while in normal mode toggle lazygit
-
 ### Harpoon
+
 ;q - Toogle UI
 <Leader><tab> - Toggle mark file
 <Leader><q-y> - Navigate to file 1-6
-
-See [docs](https://github.com/Pocco81/AutoSave.nvim) for more usage info.
