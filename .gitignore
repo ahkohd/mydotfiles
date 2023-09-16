@@ -6,6 +6,7 @@
 !.gitignore
 !README.md
 !deploy.nu
+nushell/history.txt
 
 # Allow directories
 !nvim/**/*

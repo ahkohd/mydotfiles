@@ -217,3 +217,37 @@ gs
 git add .
 gs
 cd ../
+git add .
+gs
+git commit -m "fixed untracked files" 
+ls
+vi .
+gs
+vi .
+gs
+git add .
+gs
+git rm -r --cached .
+gs
+vi .
+gs
+git rm -r --cached .
+ls
+claer
+clear
+gs
+git add .
+gs
+vi .
+gs
+git rm -r --cached .
+ls
+clear
+git log
+gs
+rm nushell/.gitignore
+;s
+ls
+gs
+git add .
+gs
