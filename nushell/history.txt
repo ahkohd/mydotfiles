@@ -251,3 +251,29 @@ ls
 gs
 git add .
 gs
+git add nushell
+ls
+gs
+git commit -m "fixed untracked files" 
+gs
+git log
+gs
+ls
+vi .
+git checkout main
+git push orign linux
+git push origin linux
+git push origin master
+ls
+gs
+vi .
+gs
+vi .
+gs
+git add  .
+gs
+git restore --stagged nushell
+git restore --staged nushell
+gs
+git rm -r --cached .
+gs

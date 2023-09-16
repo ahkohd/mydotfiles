@@ -1,12 +1,12 @@
 # Ignore 
 */*
 *.*
+nushell/history.txt
 
 # Allow files
 !.gitignore
 !README.md
 !deploy.nu
-nushell/history.txt
 
 # Allow directories
 !nvim/**/*
