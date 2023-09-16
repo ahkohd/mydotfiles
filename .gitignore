@@ -13,3 +13,5 @@
 !wezterm/**/*
 !tmux/**/*
 !nushell/**/*
+
+!1Password/**/*
