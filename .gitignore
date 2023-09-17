@@ -1,0 +1,17 @@
+# Ignore 
+*/*
+*.*
+
+# Allow files
+!.gitignore
+!README.md
+!deploy.nu
+
+# Allow directories
+!nvim/**/*
+!alacritty/**/*
+!wezterm/**/*
+!tmux/**/*
+!nushell/**/*
+
+nushell/history.txt
