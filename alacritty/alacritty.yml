@@ -5,8 +5,8 @@ window:
   dimensions:
     columns: 140
     lines: 38
-  decorations: None
-  opacity: 0.95
+  decorations: Full
+  # opacity: 0.95
   padding:
     x: 0
     y: 0
