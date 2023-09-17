@@ -277,3 +277,30 @@ git restore --staged nushell
 gs
 git rm -r --cached .
 gs
+git add .
+gs
+git commit -m "fixed untracked files" 
+gs
+git push origin master
+nvim 
+claer
+dev
+vi .
+cd frontend
+vi .
+clear
+vi .
+clar
+clear
+cTerm
+ls
+cTerm
+ls
+cTerm
+ls
+clear
+ls
+clear
+cTerm
+exit
+cTerm
