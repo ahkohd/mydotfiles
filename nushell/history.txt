@@ -1,0 +1,6 @@
+nu ~/.config/deploy.nu
+zsh
+nu ~/.config/deploy.nu
+nu
+zsh
+bash
