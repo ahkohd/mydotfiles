@@ -1,27 +1,7 @@
 -- luacheck: globals vim
---
-return {
-  "rebelot/heirline.nvim",
-  name = "heirline",
-  event = "VeryLazy",
-  config = function()
-    local heirline = require("heirline")
-    local conditions = require("heirline.conditions")
-    local utils = require("heirline.utils")
-    local colors = require("catppuccin.palettes").get_palette()
 
-    conditions.buffer_not_empty = function()
-      return vim.fn.empty(vim.fn.expand("%:t")) ~= 1
-    end
-
-    conditions.hide_in_width = function(size)
-      return vim.api.nvim_get_option("columns") > (size or 140)
-    end
-
-    local Align = { provider = "%=", hl = { bg = colors.crust } }
-    local Space = { provider = " " }
-
-    local VIMODE_COLORS = {
+local catppuccin_vim_mode_colors = function(colors)
+    return {
       ["n"] = colors.blue,
       ["no"] = colors.pink,
       ["nov"] = colors.pink,
@@ -57,6 +37,127 @@ return {
       ["nt"] = colors.red,
       ["null"] = colors.pink,
     }
+end
+
+local tokyo_night_dark_colors = function()
+  local colors = {
+    none = "NONE",
+    bg = "#1a1b26",
+    bg_dark = "#16161e",
+    bg_highlight = "#292e42",
+    terminal_black = "#414868",
+    fg = "#c0caf5",
+    fg_dark = "#a9b1d6",
+    fg_gutter = "#3b4261",
+    dark3 = "#545c7e",
+    comment = "#565f89",
+    dark5 = "#737aa2",
+    blue0 = "#3d59a1",
+    blue = "#7aa2f7",
+    cyan = "#7dcfff",
+    blue1 = "#2ac3de",
+    blue2 = "#0db9d7",
+    blue5 = "#89ddff",
+    blue6 = "#b4f9f8",
+    blue7 = "#394b70",
+    magenta = "#bb9af7",
+    magenta2 = "#ff007c",
+    purple = "#9d7cd8",
+    orange = "#ff9e64",
+    yellow = "#e0af68",
+    green = "#9ece6a",
+    green1 = "#73daca",
+    green2 = "#41a6b5",
+    teal = "#1abc9c",
+    red = "#f7768e",
+    red1 = "#db4b4b",
+    git = { change = "#6183bb", add = "#449dab", delete = "#914c54" },
+    gitSigns = {
+      add = "#266d6a",
+      change = "#536c9e",
+      delete = "#b2555b",
+    },
+  }
+
+  colors.crust = colors.bg
+  colors.mantle = colors.bg_dark
+  colors.surface2 = colors.fg_dark
+  colors.mauve = colors.blue0
+  colors.peach = colors.orange
+  colors.sky = colors.blue5
+  colors.sapphire = colors.blue6
+  colors.subtext1 = colors.blue7
+  colors.text = colors.fg
+  colors.lavender = colors.purple
+
+  return colors
+end
+
+local tokyo_night_dark_vim_mode_colors = function(colors)
+  return {
+    ["n"] = colors.blue,
+    ["no"] = colors.magenta,
+    ["nov"] = colors.magenta,
+    ["noV"] = colors.magenta,
+    ["no"] = colors.magenta,
+    ["niI"] = colors.blue,
+    ["niR"] = colors.blue,
+    ["niV"] = colors.blue,
+    ["v"] = colors.purple,
+    ["vs"] = colors.purple,
+    ["V"] = colors.blue1,
+    ["Vs"] = colors.blue1,
+    [""] = colors.yellow,
+    ["s"] = colors.yellow,
+    ["s"] = colors.teal,
+    ["S"] = colors.teal,
+    [""] = colors.yellow,
+    ["i"] = colors.green,
+    ["ic"] = colors.green,
+    ["ix"] = colors.green,
+    ["R"] = colors.red,
+    ["Rc"] = colors.red,
+    ["Rv"] = colors.orange,
+    ["Rx"] = colors.red,
+    ["c"] = colors.orange,
+    ["cv"] = colors.orange,
+    ["ce"] = colors.orange,
+    ["r"] = colors.teal,
+    ["rm"] = colors.green1,
+    ["r?"] = colors.red1,
+    ["!"] = colors.red1,
+    ["t"] = colors.red,
+    ["nt"] = colors.red,
+    ["null"] = colors.magenta
+  }
+end
+
+return {
+  "rebelot/heirline.nvim",
+  name = "heirline",
+  event = "VeryLazy",
+  config = function()
+    local heirline = require("heirline")
+    local conditions = require("heirline.conditions")
+    local utils = require("heirline.utils")
+
+    -- local colors = require("catppuccin.palettes").get_palette()
+    -- local VIMODE_COLORS = catppuccin_vim_mode_colors(colors)
+
+    local colors = tokyo_night_dark_colors()
+    local VIMODE_COLORS = tokyo_night_dark_vim_mode_colors(colors)
+
+    conditions.buffer_not_empty = function()
+      return vim.fn.empty(vim.fn.expand("%:t")) ~= 1
+    end
+
+    conditions.hide_in_width = function(size)
+      return vim.api.nvim_get_option("columns") > (size or 140)
+    end
+
+    local Align = { provider = "%=", hl = { bg = colors.crust } }
+    local Space = { provider = " " }
+
 
     local ViMode = {
       init = function(self)
@@ -226,7 +327,7 @@ return {
     local FileNameModifer = {
       hl = function()
         if vim.bo.modified then
-          return { fg = colors.text, bold = false, force = false }
+          return { fg = colors.subtext1, bold = false, force = false }
         end
       end,
     }
@@ -243,7 +344,7 @@ return {
       provider = function()
         return " " .. string.upper(vim.bo.filetype) .. " "
       end,
-      hl = { bg = colors.crust, fg = colors.surface2 },
+      hl = { bg = colors.crust, fg = colors.subtext1 },
       condition = function()
         return conditions.buffer_not_empty() and conditions.hide_in_width()
       end,
@@ -263,7 +364,7 @@ return {
       condition = function()
         return conditions.buffer_not_empty() and conditions.hide_in_width()
       end,
-      hl = { bg = colors.crust, fg = colors.surface2 },
+      hl = { bg = colors.crust, fg = colors.subtext1 },
     }
 
     local Ruler = {
@@ -271,7 +372,7 @@ return {
       condition = function()
         return conditions.buffer_not_empty() and conditions.hide_in_width()
       end,
-      hl = { bg = colors.crust, fg = colors.surface2 },
+      hl = { bg = colors.crust, fg = colors.subtext1 },
     }
 
     local LSPActive = {
@@ -543,7 +644,7 @@ return {
       condition = function()
         return conditions.buffer_not_empty() and conditions.hide_in_width()
       end,
-      hl = { bg = colors.crust, fg = colors.surface2 },
+      hl = { bg = colors.crust, fg = colors.subtext1 },
     }
 
     local FileFormat = {
@@ -557,7 +658,7 @@ return {
           return " CRLF "
         end
       end,
-      hl = { bg = colors.crust, fg = colors.surface2 },
+      hl = { bg = colors.crust, fg = colors.subtext1 },
       condition = function()
         return conditions.buffer_not_empty() and conditions.hide_in_width()
       end,
@@ -569,7 +670,7 @@ return {
         local indent_size = vim.api.nvim_buf_get_option(0, "tabstop")
         return (" %s: %s "):format(indent_type, indent_size)
       end,
-      hl = { bg = colors.crust, fg = colors.surface2 },
+      hl = { bg = colors.crust, fg = colors.subtext1 },
       condition = function()
         return conditions.buffer_not_empty() and conditions.hide_in_width()
       end,
