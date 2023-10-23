@@ -1,7 +1,7 @@
 return {
   "phaazon/hop.nvim",
-  branch = 'v2',
-  keys = {"f"},
+  branch = "v2",
+  keys = { "f" },
   config = function()
     require("hop").setup()
     vim.api.nvim_set_keymap(
@@ -28,5 +28,5 @@ return {
       "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })<cr>",
       {}
     )
-  end
+  end,
 }

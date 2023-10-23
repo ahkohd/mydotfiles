@@ -408,7 +408,7 @@ $env.config = {
   use_ansi_coloring: true
   edit_mode: vi # emacs, vi
   shell_integration: true # enables terminal markers and a workaround to arrow keys stop working issue
-  show_banner: true # true or false to enable or disable the banner
+  show_banner: false # true or false to enable or disable the banner
   render_right_prompt_on_last_line: false # true or false to enable or disable right prompt to be rendered on last line of the prompt.
 
   hooks: {
@@ -647,7 +647,7 @@ $env.config = {
       mode: [emacs, vi_normal, vi_insert]
       event: { send: menu name: commands_with_description }
     }
-    # I originaly intended to bind Tab to Esc and enter vi_normal mode
+    # I originally intended to bind Tab to Esc and enter vi_normal mode
     # but this is currently not supported - See, https://github.com/nushell/reedline/issues/499 
     {
       name: enter_normal_mode_alt_command
@@ -700,6 +700,11 @@ alias cNu = vi ($nu.config-path)
 alias cNvim = vi ~/.config/nvim
 alias cTmux = vi ~/.config/tmux/tmux.conf
 alias cWezterm = vi ~/.config/wezterm/wezterm.lua
+alias cHypr = vi ~/.config/hypr
+alias cWaybar = vi ~/.config/waybar
+alias brain = zsh -c "alacritty --working-directory ~/vaults/brain -e nvim notes/dailies &; disown"
+alias notes = zsh -c "alacritty --working-directory ~/vaults -e nvim . &; disown"
+alias obsidian = zsh -c "~/app-images/Obsidian.AppImage &; disown"
 
 # PATH
 $env.PATH = ($env.PATH | append "/usr/local/bin")

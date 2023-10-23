@@ -37,8 +37,8 @@ vim.o.smarttab = true
 vim.cmd("filetype plugin indent on")
 vim.o.shiftwidth = 2
 vim.o.tabstop = 2
-vim.o.ai = true    -- Auto indent
-vim.o.si = true    -- Smart indent
+vim.o.ai = true -- Auto indent
+vim.o.si = true -- Smart indent
 vim.o.wrap = false -- No wrap lines
 vim.o.backspace = "start,eol,indent"
 
@@ -62,3 +62,6 @@ vim.wo.cursorline = true
 vim.o.exrc = true
 vim.wo.number = true
 vim.wo.relativenumber = true
+
+-- Conceal
+vim.o.conceallevel = 2
