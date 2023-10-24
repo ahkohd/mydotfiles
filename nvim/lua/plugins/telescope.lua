@@ -3,7 +3,6 @@
 return {
   "nvim-telescope/telescope.nvim",
   tag = "0.1.2",
-  name = "telescope",
   keys = {
     { ";f",    "<cmd>lua require('telescope.builtin').find_files()<cr>",         desc = "Find files" },
     { ";r",    "<cmd>lua require('telescope.builtin').live_grep()<cr>",          desc = "Live grep" },

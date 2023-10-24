@@ -17,9 +17,6 @@ vim.o.expandtab = true
 vim.o.shell = "zsh"
 vim.o.backupskip = "/tmp/*,/private/tmp/*"
 
--- Suppress appending <PasteStart> and <PasteEnd> when pasting
-vim.o.t_BE = ""
-
 -- Don't redraw while executing macros (good performance config)
 vim.o.lazyredraw = true
 
