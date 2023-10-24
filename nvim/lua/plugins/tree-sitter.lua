@@ -73,8 +73,8 @@ return {
     parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }
 
     -- Conceal for react hooks / see: after/queries/typescript/highlights.scm
-    vim.cmd(
-      [[autocmd FileType javascript,typescript,typescriptreact syntax match ReactUsePrefix "use" conceal cchar=󰛢]]
-    )
+    -- vim.cmd(
+    --   [[autocmd FileType javascript,typescript,typescriptreact syntax match ReactUsePrefix "use" conceal cchar=󰛢]]
+    -- )
   end,
 }
