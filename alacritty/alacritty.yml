@@ -11,8 +11,10 @@ window:
   decorations: None
   opacity: 0.65
   padding:
-    x: 100
-    y: 80
+    x: 10
+    y: 5
+  # x: 100
+  # y: 80
 
 font:
   size: 15
