@@ -73,7 +73,7 @@ return {
   config = function()
     local tokyo = require("tokyonight")
     tokyo.setup({
-      transparent = true,
+      transparent = not vim.g.neovide,
       style = "night",
       terminal_colors = true,
       on_highlights = function(hl, c)

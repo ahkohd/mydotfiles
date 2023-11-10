@@ -62,3 +62,7 @@ vim.wo.relativenumber = true
 
 -- Conceal
 vim.o.conceallevel = 2
+
+if vim.g.neovide then
+	require("neovide")
+end
