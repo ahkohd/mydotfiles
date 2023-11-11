@@ -50,6 +50,22 @@ return {
 					bg = bg,
 					fg = fg,
 				}
+				hl.NormalFloat = {
+					bg = bg,
+					fg = text,
+				}
+				hl.FloatBorder = {
+					bg = bg,
+					fg = fg,
+				}
+				hl.CmpPmenu = {
+					bg = bg,
+					fg = fg,
+				}
+				hl.CmpPmenuBorder = {
+					bg = bg,
+					fg = fg,
+				}
 			end,
 		})
 		vim.cmd([[colorscheme tokyonight]])
