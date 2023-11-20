@@ -1,4 +1,5 @@
-vim.o.guifont = "BerkeleyMono Nerd Font Plus Font Awesome Plus Octicons Plus Codicons Plus Material Design Icons:h15"
+-- vim.o.guifont = "BerkeleyMono Nerd Font Plus Font Awesome Plus Octicons Plus Codicons Plus Material Design Icons:h15"
+vim.o.guifont = "IosevkaTerm Nerd Font Mono:h15"
 
 vim.g.neovide_transparency = 0.7
 
