@@ -117,12 +117,13 @@ return {
 				end),
 			}),
 			sources = cmp.config.sources({
-				{ name = "copilot", group_index = 2 },
-				{ name = "nvim_lsp", group_index = 2 },
+				{ name = "copilot" },
+				{ name = "nvim_lsp" },
 			}, {
-				{ name = "path", group_index = 2 },
+				{ name = "luasnip" },
+				{ name = "path" },
 			}, {
-				{ name = "buffer", group_index = 2 },
+				{ name = "buffer" },
 			}),
 			formatting = {
 				format = lspkind.cmp_format({ with_text = false, maxwidth = 50 }),
