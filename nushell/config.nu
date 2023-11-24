@@ -693,6 +693,7 @@ alias dev = cd ~/developer/personal
 alias wk = cd ~/developer/work
 alias z = zellij
 alias t = tmux
+alias ls = exa --icons
 
 # Configurational aliases
 alias cTerm = vi ~/.config/alacritty/alacritty.yml
