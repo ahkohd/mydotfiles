@@ -19,6 +19,7 @@ return {
 		"ThePrimeagen/harpoon",
 		"nvim-telescope/telescope-project.nvim",
 	},
+	event = "VeryLazy",
 	config = function()
 		local telescope = require("telescope")
 		local actions = require("telescope.actions")

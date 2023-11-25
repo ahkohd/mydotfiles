@@ -65,7 +65,7 @@ end
 return {
 	"neovim/nvim-lspconfig",
 	name = "lspconfig",
-	event = "BufReadPre",
+	event = "VeryLazy",
 	dependencies = {
 		"folke/neodev.nvim",
 		"williamboman/mason-lspconfig.nvim",

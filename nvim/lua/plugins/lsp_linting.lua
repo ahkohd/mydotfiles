@@ -15,13 +15,14 @@ return {
 	},
 	config = function()
 		local function pick_web_linter()
-			local root_dir = require("lspconfig.util").find_git_ancestor(vim.fn.getcwd())
-			local biome_config_path = root_dir .. "/biome.json"
-			if root_dir and vim.fn.filereadable(biome_config_path) == 1 then
-				return { "biomejs" }
-			else
-				return { "eslint_d" }
+			local root_dir = require("core.utils.project").root_dir()
+			if root_dir then
+				local biome_config_path = root_dir .. "/biome.json"
+				if root_dir and vim.fn.filereadable(biome_config_path) == 1 then
+					return { "biomejs" }
+				end
 			end
+			return { "eslint_d" }
 		end
 
 		require("lint").linters_by_ft = {
