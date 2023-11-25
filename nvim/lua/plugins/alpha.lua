@@ -119,7 +119,7 @@ return {
 						break
 					end
 
-					local icon = "📁 "
+					local icon = " "
 
 					-- create shortened path for display
 					local target_width = 35
