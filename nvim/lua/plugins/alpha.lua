@@ -82,6 +82,7 @@ return {
 						val = {
 							dashboard.button("l", "󰒲 Lazy", "<cmd>Lazy<CR>"),
 							dashboard.button("m", " Mason", "<cmd>Mason<CR>"),
+							dashboard.button("o", " Obsidian", "<cmd>lua require('core.utils.obsidian').open()<CR>"),
 							dashboard.button("t", " Telescope", "<cmd>Telescope<CR>"),
 							dashboard.button("p", " Projects", "<cmd>Telescope project<CR>"),
 						},
@@ -107,7 +108,7 @@ return {
 
 			-- Projects
 			local function get_projects(max_shown)
-				local alphabet = "abcdefghijknoqrsuvwxyz"
+				local alphabet = "abcdefghijknqrsuvwxyz"
 
 				local tbl = {
 					{ type = "text", val = "Recent Projects", opts = { hl = "SpecialComment", position = "center" } },
