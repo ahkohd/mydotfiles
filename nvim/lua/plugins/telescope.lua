@@ -29,6 +29,9 @@ return {
 		telescope.load_extension("neoclip")
 		telescope.load_extension("harpoon")
 
+		---@diagnostic disable-next-line: undefined-field
+		local is_macos = vim.loop.os_uname().sysname == "Darwin"
+
 		telescope.setup({
 			defaults = {
 				file_ignore_patterns = {
@@ -59,6 +62,7 @@ return {
 				},
 				initial_mode = "insert",
 				selection_strategy = "reset",
+				sorting_strategy = is_macos and "ascending" or "descending",
 				file_sorter = require("telescope.sorters").get_fuzzy_file,
 				generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter,
 				path_display = { "truncate" },
