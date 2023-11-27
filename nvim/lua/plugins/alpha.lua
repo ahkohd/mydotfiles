@@ -176,7 +176,7 @@ return {
 			-- Layout
 			theme.config.layout = {
 				{ type = "padding", val = 4 },
-				get_header({ headers.madebyaremu, headers.vscode_lol }),
+				get_header({ headers.neovim }),
 				{ type = "padding", val = 1 },
 				get_tools(),
 				{ type = "padding", val = 2 },
