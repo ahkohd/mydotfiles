@@ -108,7 +108,7 @@ return {
 
 			-- Projects
 			local function get_projects(max_shown)
-				local alphabet = "abcdefghijknqrsuvwxyz"
+				local alphabet = "abcdefgnqrsuvwxyz"
 
 				local tbl = {
 					{ type = "text", val = "Recent Projects", opts = { hl = "SpecialComment", position = "center" } },
@@ -123,8 +123,8 @@ return {
 					local icon = " "
 
 					-- create shortened path for display
-					local target_width = 35
-					local display_path = project.path:gsub("/", "\\"):gsub("\\\\", "\\")
+					local target_width = 32
+					local display_path = project.path
 					if #display_path > target_width then
 						display_path = plenary_path.new(display_path):shorten(1, { -2, -1 })
 						if #display_path > target_width then
