@@ -1,6 +1,6 @@
 -- luacheck: globals vim
 
-local setup_color = function()
+local setup_colors = function()
 	return {
 		none = "NONE",
 		bg = "#1a1b26",
@@ -83,7 +83,7 @@ return {
 		local conditions = require("heirline.conditions")
 		local utils = require("heirline.utils")
 
-		local colors = setup_color()
+		local colors = setup_colors()
 		local VIMODE_COLORS = vim_mode_colors(colors)
 
 		conditions.buffer_not_empty = function()

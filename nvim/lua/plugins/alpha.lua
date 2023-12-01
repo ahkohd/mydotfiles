@@ -16,9 +16,8 @@ return {
 
 			math.randomseed(os.time())
 
-			-- Header
 			local function apply_gradient_hl(text)
-				local gradient = require("core.ui.alpha.utils").create_gradient("#DCA561", "#658594", #text)
+				local gradient = require("core.ui.alpha.utils").create_gradient("#E1E1E1", "#202020", #text)
 
 				local lines = {}
 				for i, line in ipairs(text) do
@@ -186,6 +185,31 @@ return {
 				{ type = "padding", val = 3 },
 				get_footer({ quotes.yoda }, 50),
 			}
+
+			-- Function to disable lualine
+			local function disable_lualine()
+				vim.g.lualine_active = false
+				require("lualine").refresh()
+			end
+
+			-- Function to enable lualine
+			local function enable_lualine()
+				vim.g.lualine_active = true
+				require("lualine").refresh()
+			end
+
+			-- Autocmd to disable lualine on entering Alpha dashboard
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = "alpha",
+				callback = disable_lualine,
+			})
+
+			-- Autocmd to enable lualine on leaving Alpha dashboard
+			vim.api.nvim_create_autocmd({ "BufEnter", "WinEnter" }, {
+				pattern = "*",
+				callback = enable_lualine,
+			})
+
 			require("alpha").setup(theme.config)
 		end,
 	},
