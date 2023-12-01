@@ -16,9 +16,8 @@ return {
 
 			math.randomseed(os.time())
 
-			-- Header
 			local function apply_gradient_hl(text)
-				local gradient = require("core.ui.alpha.utils").create_gradient("#DCA561", "#658594", #text)
+				local gradient = require("core.ui.alpha.utils").create_gradient("#E1E1E1", "#202020", #text)
 
 				local lines = {}
 				for i, line in ipairs(text) do
