@@ -4,7 +4,11 @@ return {
 	"nvim-telescope/telescope.nvim",
 	tag = "0.1.2",
 	keys = {
-		{ ";f", "<cmd>lua require('telescope.builtin').find_files()<cr>", desc = "Find files" },
+		{
+			";f",
+			"<cmd>lua require('telescope.builtin').find_files()<cr>",
+			desc = "Find files",
+		},
 		{ ";r", "<cmd>lua require('telescope.builtin').live_grep()<cr>", desc = "Live grep" },
 		{ ";m", "<cmd>lua require('telescope.builtin').marks()<cr>", desc = "Search marks" },
 		{ ";p", "<cmd>Telescope neoclip<cr>", desc = "Search jumplist" },
@@ -33,6 +37,16 @@ return {
 		local is_macos = vim.loop.os_uname().sysname == "Darwin"
 
 		telescope.setup({
+			pickers = {
+				find_files = {
+					theme = "dropdown",
+					previewer = false,
+				},
+				buffers = {
+					theme = "dropdown",
+					previewer = false,
+				},
+			},
 			defaults = {
 				file_ignore_patterns = {
 					".git/.*",
