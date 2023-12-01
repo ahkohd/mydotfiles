@@ -97,5 +97,6 @@ return {
 			},
 		})
 		vim.cmd("colorscheme no-clown-fiesta")
+		vim.cmd("highlight LspInlayHint guifg=#373737")
 	end,
 }
