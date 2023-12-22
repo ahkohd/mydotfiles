@@ -648,7 +648,7 @@ $env.config = {
       event: { send: menu name: commands_with_description }
     }
     # I originally intended to bind Tab to Esc and enter vi_normal mode
-    # but this is currently not supported - See, https://github.com/nushell/reedline/issues/499 
+    # but this is currently not supported - See, https://github.com/nushell/reedline/issues/499
     {
       name: enter_normal_mode_alt_command
       modifier: none

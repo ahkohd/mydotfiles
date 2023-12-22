@@ -7,12 +7,7 @@ window:
     columns: 140
     lines: 38
   decorations: None
-  opacity: 0.65
-  padding:
-    x: 10
-    y: 5
-    # x: 100
-    # y: 80
+  opacity: 0.95
 font:
   size: 15
   normal:
@@ -29,9 +24,9 @@ font:
     style: Bold Italic
   offset:
     x: 0
-    y: 4
-cursor:
-  style: Beam
+    y: 0
+#
+#
 # TokyoNight Alacritty Colors
 # colors:
 #   # Default colors
@@ -61,6 +56,9 @@ cursor:
 #   indexed_colors:
 #     - {index: 16, color: "0xff9e64"}
 #     - {index: 17, color: "0xdb4b4b"}
+#
+#
+#
 # no clown fiesta theme
 colors:
   # Default colors

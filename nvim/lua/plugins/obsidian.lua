@@ -29,6 +29,5 @@ return {
 				vim.fn.jobstart({ "firefox", "--new-tab", url })
 			end,
 		})
-		vim.cmd("command! ObsidianSync lua require'core.utils.obsidian'.sync()")
 	end,
 }

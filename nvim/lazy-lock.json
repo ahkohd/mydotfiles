@@ -47,7 +47,7 @@
   "oil": { "branch": "master", "commit": "58340545c6a01e5e9f7966df448714a156db137a" },
   "plenary.nvim": { "branch": "master", "commit": "55d9fe89e33efd26f532ef20223e5f9430c8b0c0" },
   "promise-async": { "branch": "main", "commit": "94f6f03c6c1e2aab551aacdf0c1e597a7269abb6" },
-  "rust-tools.nvim": { "branch": "master", "commit": "0cc8adab23117783a0292a0c8a2fbed1005dc645" },
+  "rustaceanvim": { "branch": "master", "commit": "81dd0b0b665c079732b8042aa15a64a19806a776" },
   "surround.nvim": { "branch": "master", "commit": "36c253d6470910692491b13382f54c9bab2811e1" },
   "telescope-project.nvim": { "branch": "master", "commit": "5460c6c60d48618c5c746e5b1cad4c3e8262fdae" },
   "telescope-ui-select.nvim": { "branch": "master", "commit": "c261d903a78c2cda47a5e44488621f10f9dd7fcf" },

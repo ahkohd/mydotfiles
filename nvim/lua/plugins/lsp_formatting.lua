@@ -36,7 +36,7 @@ return {
 				yaml = { "yamlfmt" },
 				toml = { "taplo" },
 				lua = { "stylua" },
-				["*"] = { "codespell" },
+				["*"] = {},
 				["_"] = { "trim_whitespace" },
 			},
 			format_on_save = {

@@ -72,7 +72,11 @@ return {
 		"williamboman/mason.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		"hrsh7th/cmp-nvim-lsp",
-		"simrat39/rust-tools.nvim",
+		{
+			"mrcjkb/rustaceanvim",
+			version = "^3",
+			ft = { "rust" },
+		},
 	},
 	config = function()
 		require("mason").setup({
@@ -186,48 +190,14 @@ return {
 			end,
 		})
 
-		-- rust-tools
-		local rt = require("rust-tools")
-		local rustopts = {
-			tools = {
-				runnables = {
-					use_telescope = true,
-				},
-				inlay_hints = {
-					auto = false,
-				},
-				hover_actions = {
-					auto_focus = true,
-				},
-			},
+		-- configure rustaceanvim
+		vim.g.rustaceanvim = {
 			server = {
-				on_attach = on_attach,
-				capabilities = require("cmp_nvim_lsp").default_capabilities(),
-				settings = {
-					["rust-analyzer"] = {
-						diagnostics = {
-							disabled = { "unresolved-proc-macro" },
-						},
-						inlayHints = {
-							enable = true,
-						},
-						checkOnSave = {
-							command = "clippy",
-							allFeatures = true,
-							overrideCommand = {
-								"cargo",
-								"clippy",
-								"--workspace",
-								"--message-format=json",
-								"--all-targets",
-								"--all-features",
-							},
-						},
-					},
-				},
+				on_attach = function(client, bufnr)
+					on_attach(client, bufnr)
+				end,
 			},
 		}
-		rt.setup(rustopts)
 
 		-- auto install tools
 		require("mason-tool-installer").setup({
