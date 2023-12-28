@@ -8,6 +8,9 @@ window:
     lines: 38
   decorations: None
   opacity: 0.95
+  padding:
+    x: 10
+    y: 5
 font:
   size: 15
   normal:
