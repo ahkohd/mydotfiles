@@ -19,7 +19,7 @@ vim.o.backupskip = "/tmp/*,/private/tmp/*"
 vim.o.showtabline = 0
 
 -- Don't redraw while executing macros (good performance config)
-vim.o.lazyredraw = true
+-- vim.o.lazyredraw = true
 
 -- Uncomment if you want to use these options
 -- vim.o.showmatch = true
