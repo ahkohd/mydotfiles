@@ -31,7 +31,7 @@ return {
 			cmdline = {
 				view = "cmdline",
 				format = {
-					cmdline = { pattern = "^:", icon = " 󰘳", lang = "vim" },
+					cmdline = { pattern = "^:", icon = " ", lang = "vim" },
 					search_down = { kind = "search", pattern = "^/", icon = " ", lang = "regex" },
 					search_up = { kind = "search", pattern = "^%?", icon = " ", lang = "regex" },
 					filter = { pattern = "^:%s*!", icon = " ", lang = "bash" },
@@ -43,8 +43,9 @@ return {
 		local icons = require("core.ui.icons")
 		require("notify").setup({
 			background_colour = "#000000",
-			render = "default",
+			render = "minimal",
 			stages = "static",
+			top_down = false,
 			icons = {
 				ERROR = icons.error,
 				WARN = icons.warn,

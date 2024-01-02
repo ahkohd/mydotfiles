@@ -1,18 +1,18 @@
 shell:
-  program: /home/var/.cargo/bin/nu
+  program: zsh
 env:
   TERM: alacritty
 window:
   dimensions:
     columns: 140
     lines: 38
-  decorations: None
-  opacity: 0.95
+  decorations: Buttonless
+  opacity: 1
   padding:
     x: 10
     y: 5
 font:
-  size: 15
+  size: 18
   normal:
     family: "BerkeleyMono Nerd Font Plus Font Awesome Plus Octicons Plus Codicons Plus Material Design Icons"
     style: Regular
