@@ -9,10 +9,14 @@ return {
 			fm.setup({
 				glow = false,
 				theme = "delta",
-				-- transparent = true,
+				transparent = "full",
 			})
 
 			vim.cmd.colorscheme("fluoromachine")
+
+			vim.cmd("highlight TelescopeTitle gui=NONE")
+			vim.cmd("highlight TelescopePromptTitle gui=NONE")
+			vim.cmd("highlight TelescopePreviewTitle gui=NONE")
 		end,
 	},
 }
