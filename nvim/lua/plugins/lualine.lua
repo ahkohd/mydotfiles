@@ -103,7 +103,8 @@ return {
 		local opts = {
 			options = {
 				icons_enabled = true,
-				theme = theme,
+				-- theme = theme,
+				theme = "fluoromachine",
 				component_separators = "",
 				section_separators = { left = "", right = "" },
 				disabled_filetypes = disable,

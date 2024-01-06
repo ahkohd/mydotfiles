@@ -6,13 +6,12 @@ window:
   dimensions:
     columns: 140
     lines: 38
-  decorations: Buttonless
   opacity: 1
   padding:
     x: 10
     y: 5
 font:
-  size: 18
+  size: 16
   normal:
     family: "BerkeleyMono Nerd Font Plus Font Awesome Plus Octicons Plus Codicons Plus Material Design Icons"
     style: Regular
@@ -27,7 +26,7 @@ font:
     style: Bold Italic
   offset:
     x: 0
-    y: 0
+    y: 6
 #
 #
 # TokyoNight Alacritty Colors
@@ -63,70 +62,121 @@ font:
 #
 #
 # no clown fiesta theme
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0x151515'
+#     foreground: '0xE1E1E1'
+#   # Normal colors
+#   normal:
+#     black: '0x151515'
+#     red: '0xb46958'
+#     green: '0x90A959'
+#     yellow: '0xF4BF75'
+#     blue: '0xBAD7FF'
+#     magenta: '0xAA759F'
+#     cyan: '0x88afa2'
+#     white: '0xE1E1E1'
+#   # Bright colors
+#   bright:
+#     black: '0x373737'
+#     red: '0x984936'
+#     green: '0x1c2019'
+#     yellow: '0xab8550'
+#     blue: '0x191a20'
+#     magenta: '0xAA749F'
+#     cyan: '0xA2B5C1'
+#     white: '0xAFAFAF'
+#   # Dimmed colors (Optional, remove if not required)
+#   dim:
+#     black: '0x171717'
+#     red: '0x7E97AB'
+#     green: '0x576f82'
+#     yellow: '0x727272'
+#     blue: '0x202020'
+#     magenta: '0xAA749F'
+#     cyan: '0x7E97AB'
+#     white: '0xAFAFAF'
+#   # Indexed colors (Optional, remove if not required)
+#   indexed_colors:
+#     - {index: 16, color: '0x984936'}
+#     - {index: 17, color: '0xab8550'}
+#   # Cursor colors
+#   cursor:
+#     text: '0x151515'
+#     cursor: '0xD0D0D0'
+#   # Vi mode cursor colors (Optional, remove if not required)
+#   vi_mode_cursor:
+#     text: '0x151515'
+#     cursor: '0xD0D0D0'
+#   # Selection colors
+#   selection:
+#     text: '0xE1E1E1'
+#     background: '0x373737'
+#   # Search colors (Optional, remove if not required)
+#   search:
+#     matches:
+#       foreground: '0xE1E1E1'
+#       background: '0x727272'
+#     focused_match:
+#       foreground: '0xE1E1E1'
+#       background: '0x373737'
+#   # Hints
+#   hints:
+#     start:
+#       foreground: '0xE1E1E1'
+#       background: '0x727272'
+#     end:
+#       foreground: '0xE1E1E1'
+#       background: '0x373737'
+#
+# flouromachine
 colors:
   # Default colors
   primary:
-    background: '0x151515'
-    foreground: '0xE1E1E1'
+    background: '#262335'
+    foreground: '#8BA7A7'
   # Normal colors
   normal:
-    black: '0x151515'
-    red: '0xb46958'
-    green: '0x90A959'
-    yellow: '0xF4BF75'
-    blue: '0xBAD7FF'
-    magenta: '0xAA759F'
-    cyan: '0x88afa2'
-    white: '0xE1E1E1'
+    black: '#262335'
+    red: '#fe4450'
+    green: '#72f1b8'
+    yellow: '#FFCC00'
+    blue: '#AF6DF9'
+    magenta: '#FC199A'
+    cyan: '#61E2FF'
+    white: '#8BA7A7'
   # Bright colors
   bright:
-    black: '0x373737'
-    red: '0x984936'
-    green: '0x1c2019'
-    yellow: '0xab8550'
-    blue: '0x191a20'
-    magenta: '0xAA749F'
-    cyan: '0xA2B5C1'
-    white: '0xAFAFAF'
-  # Dimmed colors (Optional, remove if not required)
-  dim:
-    black: '0x171717'
-    red: '0x7E97AB'
-    green: '0x576f82'
-    yellow: '0x727272'
-    blue: '0x202020'
-    magenta: '0xAA749F'
-    cyan: '0x7E97AB'
-    white: '0xAFAFAF'
-  # Indexed colors (Optional, remove if not required)
-  indexed_colors:
-    - {index: 16, color: '0x984936'}
-    - {index: 17, color: '0xab8550'}
+    black: '#241b2f'
+    red: '#fe4450'
+    green: '#72f1b8'
+    yellow: '#FFCC00'
+    blue: '#AF6DF9'
+    magenta: '#FC199A'
+    cyan: '#61E2FF'
+    white: '#8BA7A7'
   # Cursor colors
   cursor:
-    text: '0x151515'
-    cursor: '0xD0D0D0'
-  # Vi mode cursor colors (Optional, remove if not required)
-  vi_mode_cursor:
-    text: '0x151515'
-    cursor: '0xD0D0D0'
+    text: '#282a36'
+    cursor: '#8BA7A7'
   # Selection colors
   selection:
-    text: '0xE1E1E1'
-    background: '0x373737'
-  # Search colors (Optional, remove if not required)
-  search:
-    matches:
-      foreground: '0xE1E1E1'
-      background: '0x727272'
-    focused_match:
-      foreground: '0xE1E1E1'
-      background: '0x373737'
-  # Hints
-  hints:
-    start:
-      foreground: '0xE1E1E1'
-      background: '0x727272'
-    end:
-      foreground: '0xE1E1E1'
-      background: '0x373737'
+    text: '#8BA7A7'
+    background: '#463465'
+  # Other colors (You can assign these as needed)
+  # These are not directly used in Alacritty's config, but you can use them for custom configurations.
+  comment: '#495495'
+  orange: '#ff8b39'
+  pink: '#FC199A'
+  sign_add: '#72f1b8'
+  sign_change: '#ff8b39'
+  sign_delete: '#fe4450'
+  error: '#fe4450'
+  warning: '#ff8b39'
+  info: '#61E2FF'
+  hint: '#61E2FF'
+  other: '#AF6DF9'
+  blankline: '#57367C'
+  active_blankline: '#7E0C4D'
+  inlay_hint: '#8C57C7'
