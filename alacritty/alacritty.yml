@@ -11,7 +11,7 @@ window:
     x: 10
     y: 5
 font:
-  size: 16
+  size: 15
   normal:
     family: "BerkeleyMono Nerd Font Plus Font Awesome Plus Octicons Plus Codicons Plus Material Design Icons"
     style: Regular
@@ -26,7 +26,7 @@ font:
     style: Bold Italic
   offset:
     x: 0
-    y: 5
+    y: 0
 #
 #
 # TokyoNight Alacritty Colors
@@ -62,119 +62,119 @@ font:
 #
 #
 # no clown fiesta theme
-# colors:
-#   # Default colors
-#   primary:
-#     background: '0x151515'
-#     foreground: '0xE1E1E1'
-#   # Normal colors
-#   normal:
-#     black: '0x151515'
-#     red: '0xb46958'
-#     green: '0x90A959'
-#     yellow: '0xF4BF75'
-#     blue: '0xBAD7FF'
-#     magenta: '0xAA759F'
-#     cyan: '0x88afa2'
-#     white: '0xE1E1E1'
-#   # Bright colors
-#   bright:
-#     black: '0x373737'
-#     red: '0x984936'
-#     green: '0x1c2019'
-#     yellow: '0xab8550'
-#     blue: '0x191a20'
-#     magenta: '0xAA749F'
-#     cyan: '0xA2B5C1'
-#     white: '0xAFAFAF'
-#   # Dimmed colors (Optional, remove if not required)
-#   dim:
-#     black: '0x171717'
-#     red: '0x7E97AB'
-#     green: '0x576f82'
-#     yellow: '0x727272'
-#     blue: '0x202020'
-#     magenta: '0xAA749F'
-#     cyan: '0x7E97AB'
-#     white: '0xAFAFAF'
-#   # Indexed colors (Optional, remove if not required)
-#   indexed_colors:
-#     - {index: 16, color: '0x984936'}
-#     - {index: 17, color: '0xab8550'}
-#   # Cursor colors
-#   cursor:
-#     text: '0x151515'
-#     cursor: '0xD0D0D0'
-#   # Vi mode cursor colors (Optional, remove if not required)
-#   vi_mode_cursor:
-#     text: '0x151515'
-#     cursor: '0xD0D0D0'
-#   # Selection colors
-#   selection:
-#     text: '0xE1E1E1'
-#     background: '0x373737'
-#   # Search colors (Optional, remove if not required)
-#   search:
-#     matches:
-#       foreground: '0xE1E1E1'
-#       background: '0x727272'
-#     focused_match:
-#       foreground: '0xE1E1E1'
-#       background: '0x373737'
-#   # Hints
-#   hints:
-#     start:
-#       foreground: '0xE1E1E1'
-#       background: '0x727272'
-#     end:
-#       foreground: '0xE1E1E1'
-#       background: '0x373737'
-#
-# flouromachine - delta
 colors:
   # Default colors
   primary:
-    background: '0x2B2233'
-    foreground: '0xEFEFFD'
+    background: '0x151515'
+    foreground: '0xE1E1E1'
   # Normal colors
   normal:
-    black: '0x251d2b'
-    red: '0xFF98B3'
-    green: '0xC0FF98'
-    yellow: '0xEDFF98'
-    blue: '0xD598FF'
-    magenta: '0xFF67D4'
-    cyan: '0x98FFFB'
-    white: '0x492949'
+    black: '0x151515'
+    red: '0xb46958'
+    green: '0x90A959'
+    yellow: '0xF4BF75'
+    blue: '0x7b909d'
+    magenta: '0xAA759F'
+    cyan: '0x88afa2'
+    white: '0xE1E1E1'
   # Bright colors
   bright:
-    black: '0x492949'
-    red: '0xFF98B3'
-    green: '0xC0FF98'
-    yellow: '0xFFD298'
-    blue: '0xD598FF'
-    magenta: '0xFF67D4'
-    cyan: '0x98FFFB'
-    white: '0xEFEFFD'
+    black: '0x303030'
+    red: '0x984936'
+    green: '0xB4D46C'
+    yellow: '0xab8550'
+    blue: '0xA2B5C1'
+    magenta: '0xAA749F'
+    cyan: '0xA2B5C1'
+    white: '0xffffff'
+  # Dimmed colors (Optional, remove if not required)
+  dim:
+    black: '0x171717'
+    red: '0x7E97AB'
+    green: '0x576f82'
+    yellow: '0x727272'
+    blue: '0x202020'
+    magenta: '0xAA749F'
+    cyan: '0x7E97AB'
+    white: '0xAFAFAF'
+  # Indexed colors (Optional, remove if not required)
+  # indexed_colors:
+  #   - {index: 16, color: '0x984936'}
+  #   - {index: 17, color: '0xab8550'}
   # Cursor colors
   cursor:
-    text: '0x282a36'
-    cursor: '0xf8f8f8'
+    text: '0x151515'
+    cursor: '0x575757'
+  # Vi mode cursor colors (Optional, remove if not required)
+  vi_mode_cursor:
+    text: '0x151515'
+    cursor: '0xF4BF75'
   # Selection colors
   selection:
-    text: '0x492949'
-    background: '0x492949'
-  # Special colors for signs, errors, warnings, etc. (Optional)
-  # These are not directly supported by Alacritty but can be used in shell prompts, etc.
-  # Replace `black`, `red`, etc., in your shell prompt configuration with these colors.
-  sign_add: '0xC0FF98'
-  sign_change: '0xFFD298'
-  sign_delete: '0xFF98B3'
-  error: '0xFF98B3'
-  warning: '0xffd298'
-  info: '0xC0FF98'
-  hint: '0xC0FF98'
-  other: '0xD598FF'
-  blankline: '0x492949'
-  active_blankline: '0x607F4C'
-  inlay_hint: '0x99CC79'
+    text: '0xE1E1E1'
+    background: '0x373737'
+  # Search colors (Optional, remove if not required)
+  search:
+    matches:
+      foreground: '0xE1E1E1'
+      background: '0x727272'
+    focused_match:
+      foreground: '0xE1E1E1'
+      background: '0x373737'
+  # Hints
+  hints:
+    start:
+      foreground: '0xE1E1E1'
+      background: '0x727272'
+    end:
+      foreground: '0xE1E1E1'
+      background: '0x373737'
+#
+# flouromachine - delta
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0x2B2233'
+#     foreground: '0xEFEFFD'
+#   # Normal colors
+#   normal:
+#     black: '0x251d2b'
+#     red: '0xFF98B3'
+#     green: '0xC0FF98'
+#     yellow: '0xEDFF98'
+#     blue: '0xD598FF'
+#     magenta: '0xFF67D4'
+#     cyan: '0x98FFFB'
+#     white: '0x492949'
+#   # Bright colors
+#   bright:
+#     black: '0x492949'
+#     red: '0xFF98B3'
+#     green: '0xC0FF98'
+#     yellow: '0xFFD298'
+#     blue: '0xD598FF'
+#     magenta: '0xFF67D4'
+#     cyan: '0x98FFFB'
+#     white: '0xEFEFFD'
+#   # Cursor colors
+#   cursor:
+#     text: '0x282a36'
+#     cursor: '0xf8f8f8'
+#   # Selection colors
+#   selection:
+#     text: '0x492949'
+#     background: '0x492949'
+#   # Special colors for signs, errors, warnings, etc. (Optional)
+#   # These are not directly supported by Alacritty but can be used in shell prompts, etc.
+#   # Replace `black`, `red`, etc., in your shell prompt configuration with these colors.
+#   sign_add: '0xC0FF98'
+#   sign_change: '0xFFD298'
+#   sign_delete: '0xFF98B3'
+#   error: '0xFF98B3'
+#   warning: '0xffd298'
+#   info: '0xC0FF98'
+#   hint: '0xC0FF98'
+#   other: '0xD598FF'
+#   blankline: '0x492949'
+#   active_blankline: '0x607F4C'
+#   inlay_hint: '0x99CC79'
