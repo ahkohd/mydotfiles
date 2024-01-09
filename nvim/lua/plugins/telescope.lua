@@ -32,7 +32,7 @@ return {
 		telescope.load_extension("ui-select")
 		telescope.load_extension("neoclip")
 		telescope.load_extension("harpoon")
-		telescope.load_extension("noice")
+		-- telescope.load_extension("noice")
 
 		---@diagnostic disable-next-line: undefined-field
 		local is_macos = vim.loop.os_uname().sysname == "Darwin"
