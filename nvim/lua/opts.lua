@@ -10,11 +10,11 @@ vim.o.title = true
 vim.o.autoindent = true
 vim.o.hlsearch = true
 vim.o.showcmd = true
-vim.o.cmdheight = 0
+-- vim.o.cmdheight = 1
 vim.o.laststatus = 2
 vim.wo.scrolloff = 10
 vim.o.expandtab = true
-vim.o.shell = "zsh"
+vim.o.shell = "nu"
 vim.o.backupskip = "/tmp/*,/private/tmp/*"
 vim.o.showtabline = 0
 
