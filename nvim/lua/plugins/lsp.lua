@@ -62,7 +62,6 @@ return {
 		"folke/neodev.nvim",
 		"williamboman/mason-lspconfig.nvim",
 		"williamboman/mason.nvim",
-		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		"hrsh7th/cmp-nvim-lsp",
 		{
 			"mrcjkb/rustaceanvim",
@@ -190,20 +189,5 @@ return {
 				end,
 			},
 		}
-
-		-- auto install tools
-		require("mason-tool-installer").setup({
-			ensure_installed = {
-				"biome",
-				"prettierd",
-				"eslint_d",
-				"luacheck",
-				"stylua",
-				"yamlfmt",
-				"taplo",
-				"codespell",
-				"trim_whitespace",
-			},
-		})
 	end,
 }
