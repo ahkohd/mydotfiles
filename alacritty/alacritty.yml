@@ -3,6 +3,7 @@ shell:
 env:
   TERM: alacritty
 window:
+  decorations: buttonless
   dimensions:
     columns: 140
     lines: 38
@@ -11,7 +12,7 @@ window:
     x: 10
     y: 5
 font:
-  size: 15
+  size: 18
   normal:
     family: "BerkeleyMono Nerd Font Plus Font Awesome Plus Octicons Plus Codicons Plus Material Design Icons"
     style: Regular

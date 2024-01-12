@@ -1,10 +1,10 @@
 return {
 	"stevearc/oil.nvim",
+	dependencies = { "nvim-tree/nvim-web-devicons" },
 	name = "oil",
 	lazy = false,
 	keys = {
-		{ "<C-f>", "<cmd>lua require('oil').open()<cr>", desc = "Open Oil" },
+		{ "<space>o", "<cmd>lua require('oil').open()<cr>", desc = "Open Oil" },
 	},
 	opts = {},
-	dependencies = { "nvim-tree/nvim-web-devicons" },
 }
