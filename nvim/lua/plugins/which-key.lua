@@ -21,6 +21,12 @@ return {
 			["<space>h"] = {
 				name = "Harpoon",
 			},
+			["<space>d"] = {
+				name = "Diagnostics",
+			},
+			["<leader>g"] = {
+				name = "Git mode",
+			},
 		})
 	end,
 }

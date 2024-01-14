@@ -4,6 +4,13 @@ return {
 	"kevinhwang91/nvim-ufo",
 	dependencies = { "kevinhwang91/promise-async" },
 	event = { "BufReadPre", "BufNewFile" },
+	keys = {
+		{ "zR", "<cmd>:lua require('ufo').openAllFolds()<CR>", desc = "Open all folds" },
+		{ "zM", "<cmd>:lua require('ufo').closeAllFolds()<CR>", desc = "Close all folds" },
+		{ "zr", "<cmd>:lua require('ufo').openFoldsExceptKinds()<CR>", desc = "Open all folds except kinds" },
+		{ "zm", "<cmd>:lua require('ufo').closeFoldsWith()<CR>", desc = "Close all folds with kinds" },
+		{ "K", desc = "Peek folded lines under cursor" },
+	},
 	config = function()
 		local ftMap = {
 			vim = "indent",
@@ -62,15 +69,11 @@ return {
 					jumpBot = "]",
 				},
 			},
-			provider_selector = function(bufnr, filetype, buftype)
+			provider_selector = function(_, filetype, _)
 				return ftMap[filetype] or { "lsp", "indent" }
 			end,
 		})
 
-		vim.keymap.set("n", "zR", require("ufo").openAllFolds)
-		vim.keymap.set("n", "zM", require("ufo").closeAllFolds)
-		vim.keymap.set("n", "zr", require("ufo").openFoldsExceptKinds)
-		vim.keymap.set("n", "zm", require("ufo").closeFoldsWith) -- closeAllFolds == closeFoldsWith(0)
 		vim.keymap.set("n", "K", function()
 			local winid = require("ufo").peekFoldedLinesUnderCursor()
 			if not winid then
