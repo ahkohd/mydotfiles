@@ -25,5 +25,13 @@
         "/home/var/.local/state/nvim/lazy/readme",
         "${3rd}/luassert/library"
     ],
-    "workspace.checkThirdParty": false
+    "workspace.checkThirdParty": false,
+    "diagnostics.globals": [
+        "vim",
+        "packer_plugins",
+        "api",
+        "fn",
+        "loop",
+        "_btop_toggle"
+    ]
 }
