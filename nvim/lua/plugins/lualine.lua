@@ -10,7 +10,25 @@ return {
 			bg = nil,
 			fg = "#D0D0D0",
 		}
-		local theme = {
+
+		local transparent_theme = {
+			normal = {
+				a = { fg = colors.fg, bg = colors.bg, gui = "bold" },
+				b = { fg = colors.fg, bg = colors.bg },
+				c = { fg = colors.fg, bg = colors.bg },
+			},
+			insert = { a = { fg = colors.fg, bg = colors.bg, gui = "bold" } },
+			visual = { a = { fg = colors.fg, bg = colors.bg, gui = "bold" } },
+			command = { a = { fg = colors.fg, bg = colors.bg, gui = "bold" } },
+			replace = { a = { fg = colors.fg, bg = colors.bg, gui = "bold" } },
+			inactive = {
+				a = { fg = colors.fg, bg = colors.bg },
+				b = { fg = colors.fg, bg = colors.bg },
+				c = { fg = colors.fg, bg = colors.bg },
+			},
+		}
+
+		local my_embark = {
 			normal = {
 				a = { fg = colors.fg, bg = colors.bg, gui = "bold" },
 				b = { fg = colors.fg, bg = colors.bg },
@@ -43,6 +61,10 @@ return {
 		local function hide_in_width()
 			return vim.fn.winwidth(0) > 80
 		end
+
+		local space = {
+			" ",
+		}
 
 		local diagnostics = {
 			"diagnostics",
@@ -103,22 +125,23 @@ return {
 		local opts = {
 			options = {
 				icons_enabled = true,
-				theme = theme,
-				-- theme = "fluoromachine",
+				-- theme = "embark",
+				theme = my_embark,
 				component_separators = "",
-				section_separators = { left = "", right = "" },
+				section_separators = { left = "", right = " " },
+				-- section_separators = { left = "", right = "" },
 				disabled_filetypes = disable,
 				ignore_focus = ignore,
 				always_divide_middle = true,
 				globalstatus = true,
 			},
 			sections = {
-				lualine_a = { "mode" },
-				lualine_b = { branch, diff },
-				lualine_c = {},
-				lualine_x = { lsp_progress, language_server, diagnostics },
-				lualine_y = { filetype },
-				lualine_z = { "location", "progress" },
+				lualine_a = { filetype, "filename" },
+				lualine_b = { branch },
+				lualine_c = { space, diff, diagnostics },
+				lualine_x = { lsp_progress, language_server },
+				lualine_y = { "progress" },
+				lualine_z = { "location" },
 			},
 			inactive_sections = {
 				lualine_a = { "mode" },
@@ -126,7 +149,7 @@ return {
 				lualine_c = {},
 				lualine_x = {},
 				lualine_y = {},
-				lualine_z = { "location", "progress" },
+				lualine_z = { "location" },
 			},
 			extensions = {},
 		}

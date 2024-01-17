@@ -57,5 +57,15 @@ return {
 			"<cmd>lua require('harpoon.ui').nav_file(5)<cr>",
 			desc = "Goto #5",
 		},
+		{
+			"<space><left>",
+			"<cmd>bp<cr>",
+			desc = "Go-to previous buffer",
+		},
+		{
+			"<space><right>",
+			"<cmd>bn<cr>",
+			desc = "Go-to next buffer",
+		},
 	},
 }

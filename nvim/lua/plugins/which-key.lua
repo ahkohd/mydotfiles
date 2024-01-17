@@ -27,6 +27,9 @@ return {
 			["<leader>g"] = {
 				name = "Git mode",
 			},
+			["<leader>b"] = {
+				name = "Debugging",
+			},
 		})
 	end,
 }

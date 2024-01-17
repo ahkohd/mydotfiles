@@ -14,7 +14,7 @@ vim.o.showcmd = true
 vim.o.laststatus = 2
 vim.wo.scrolloff = 10
 vim.o.expandtab = true
-vim.o.shell = "nu"
+vim.o.shell = "zsh"
 vim.o.backupskip = "/tmp/*,/private/tmp/*"
 vim.o.showtabline = 0
 

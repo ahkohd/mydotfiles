@@ -7,7 +7,7 @@ return {
 		"s1n7ax/nvim-window-picker",
 	},
 	keys = {
-		{ mode = "n", "<space>e", "<cmd>:Neotree position=current<cr>", desc = "Neotree" },
+		{ mode = "n", "<space>e", "<cmd>:Neotree position=right<cr>", desc = "Neotree" },
 	},
 	branch = "v3.x",
 }
