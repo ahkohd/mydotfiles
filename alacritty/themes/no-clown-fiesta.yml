@@ -1,0 +1,67 @@
+colors:
+  # Default colors
+  primary:
+    background: '0x151515'
+    foreground: '0xE1E1E1'
+  # Normal colors
+  normal:
+    black: '0x151515'
+    red: '0xb46958'
+    green: '0x90A959'
+    yellow: '0xF4BF75'
+    blue: '0x7b909d'
+    magenta: '0xAA759F'
+    cyan: '0x88afa2'
+    white: '0xE1E1E1'
+  # Bright colors
+  bright:
+    black: '0x303030'
+    red: '0x984936'
+    green: '0xB4D46C'
+    yellow: '0xab8550'
+    blue: '0xA2B5C1'
+    magenta: '0xAA749F'
+    cyan: '0xA2B5C1'
+    white: '0xffffff'
+  # Dimmed colors (Optional, remove if not required)
+  dim:
+    black: '0x171717'
+    red: '0x7E97AB'
+    green: '0x576f82'
+    yellow: '0x727272'
+    blue: '0x202020'
+    magenta: '0xAA749F'
+    cyan: '0x7E97AB'
+    white: '0xAFAFAF'
+  # Indexed colors (Optional, remove if not required)
+  # indexed_colors:
+  #   - {index: 16, color: '0x984936'}
+  #   - {index: 17, color: '0xab8550'}
+  # Cursor colors
+  cursor:
+    text: '0x151515'
+    cursor: '0x575757'
+  # Vi mode cursor colors (Optional, remove if not required)
+  vi_mode_cursor:
+    text: '0x151515'
+    cursor: '0xF4BF75'
+  # Selection colors
+  selection:
+    text: '0xE1E1E1'
+    background: '0x373737'
+  # Search colors (Optional, remove if not required)
+  search:
+    matches:
+      foreground: '0xE1E1E1'
+      background: '0x727272'
+    focused_match:
+      foreground: '0xE1E1E1'
+      background: '0x373737'
+  # Hints
+  hints:
+    start:
+      foreground: '0xE1E1E1'
+      background: '0x727272'
+    end:
+      foreground: '0xE1E1E1'
+      background: '0x373737'

@@ -1,4 +1,4 @@
--- luacheck: globals vim
+-- luacheck: globals vim BTOP_TOGGLE GITUI_TOGGLE
 
 return {
 	"akinsho/toggleterm.nvim",
@@ -6,8 +6,20 @@ return {
 	version = "*",
 	keys = {
 		{ "<space><tab>", desc = "Open Terminal" },
-		{ "<space><PageUp>", desc = "Open btop" },
-		{ "<space><PageDown>", desc = "Open Git UI" },
+		{
+			"<space><PageUp>",
+			function()
+				BTOP_TOGGLE()
+			end,
+			desc = "Toggle btop",
+		},
+		{
+			"<space><PageDown>",
+			function()
+				GITUI_TOGGLE()
+			end,
+			desc = "Toggle Git UI",
+		},
 	},
 	config = function()
 		local toggleterm = require("toggleterm")
@@ -25,28 +37,16 @@ return {
 		})
 
 		local btop = Terminal:new({ cmd = "btop", hidden = true })
-		local gitui = Terminal:new({ cmd = "gitui", hidden = true })
 
-		function _btop_toggle()
+		function BTOP_TOGGLE()
 			btop:toggle()
 		end
 
-		function _gitui_toggle()
+		local gitui = Terminal:new({ cmd = "gitui", hidden = true })
+
+		function GITUI_TOGGLE()
 			gitui:toggle()
 		end
-
-		vim.api.nvim_set_keymap(
-			"n",
-			"<space><PageUp>",
-			"<cmd>lua _btop_toggle()<CR>",
-			{ noremap = true, silent = true }
-		)
-		vim.api.nvim_set_keymap(
-			"n",
-			"<space><PageDown>",
-			"<cmd>lua _gitui_toggle()<CR>",
-			{ noremap = true, silent = true }
-		)
 
 		-- use <esc> enter normal mode in terminal
 		vim.api.nvim_set_keymap("t", "<ESC>", "<C-\\><C-n>", { noremap = true, silent = true })
