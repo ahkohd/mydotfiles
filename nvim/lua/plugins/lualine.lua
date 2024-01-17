@@ -6,42 +6,78 @@ return {
 	event = "BufReadPost",
 	config = function()
 		local icons = require("core.ui.icons")
-		local colors = {
-			bg = nil,
-			fg = "#D0D0D0",
+
+		-- local trans_colors = {
+		-- 	bg = nil,
+		-- 	fg = "#D0D0D0",
+		-- }
+		-- local transparent_theme = {
+		-- 	normal = {
+		-- 		a = { fg = trans_colors.fg, bg = trans_colors.bg, gui = "bold" },
+		-- 		b = { fg = trans_colors.fg, bg = trans_colors.bg },
+		-- 		c = { fg = trans_colors.fg, bg = trans_colors.bg },
+		-- 	},
+		-- 	insert = { a = { fg = trans_colors.fg, bg = trans_colors.bg, gui = "bold" } },
+		-- 	visual = { a = { fg = trans_colors.fg, bg = trans_colors.bg, gui = "bold" } },
+		-- 	command = { a = { fg = trans_colors.fg, bg = trans_colors.bg, gui = "bold" } },
+		-- 	replace = { a = { fg = trans_colors.fg, bg = trans_colors.bg, gui = "bold" } },
+		-- 	inactive = {
+		-- 		a = { fg = trans_colors.fg, bg = trans_colors.bg },
+		-- 		b = { fg = trans_colors.fg, bg = trans_colors.bg },
+		-- 		c = { fg = trans_colors.fg, bg = trans_colors.bg },
+		-- 	},
+		-- }
+
+		local embark_colors = {
+			space0 = "#100e23",
+			space1 = "#191729",
+			space2 = "#2d2b40",
+			space3 = "#3e3859",
+			space4 = "#585273",
+			astral1 = "#cbe3e7",
+			cyan = "#aaffe4",
+			darkcyan = "#63f2f1",
+			yellow = "#ffe9aa",
+			darkyellow = "#ffb378",
+			red = "#f48fb1",
+			darkred = "#ff5458",
+			green = "#a1efd3",
+			darkgreen = "#62d196",
+			purple = "#d4bfff",
+			nebula10 = "#78A8ff",
+			nebula11 = "#7676ff",
 		}
 
-		local transparent_theme = {
+		local embark = {
 			normal = {
-				a = { fg = colors.fg, bg = colors.bg, gui = "bold" },
-				b = { fg = colors.fg, bg = colors.bg },
-				c = { fg = colors.fg, bg = colors.bg },
+				a = { fg = embark_colors.space4, bg = embark_colors.space2 },
+				b = { fg = embark_colors.space4, bg = embark_colors.space1 },
+				c = { fg = embark_colors.space4, bg = embark_colors.space0 },
+				x = { fg = embark_colors.space4, bg = embark_colors.space0 },
+				y = { fg = embark_colors.space4, bg = embark_colors.space1 },
+				z = { fg = embark_colors.space4, bg = embark_colors.space2 },
 			},
-			insert = { a = { fg = colors.fg, bg = colors.bg, gui = "bold" } },
-			visual = { a = { fg = colors.fg, bg = colors.bg, gui = "bold" } },
-			command = { a = { fg = colors.fg, bg = colors.bg, gui = "bold" } },
-			replace = { a = { fg = colors.fg, bg = colors.bg, gui = "bold" } },
+			visual = {
+				a = { fg = embark_colors.space0, bg = embark_colors.yellow, gui = "bold" },
+				b = { fg = embark_colors.space0, bg = embark_colors.darkyellow },
+			},
+			insert = {
+				a = { fg = embark_colors.darkcyan, bg = embark_colors.space2 },
+				b = { fg = embark_colors.space4, bg = embark_colors.space1 },
+				c = { fg = embark_colors.space4, bg = embark_colors.space0 },
+				x = { fg = embark_colors.space4, bg = embark_colors.space0 },
+				y = { fg = embark_colors.space4, bg = embark_colors.space1 },
+				z = { fg = embark_colors.space4, bg = embark_colors.space2 },
+			},
+			replace = {
+				a = { fg = embark_colors.space0, bg = embark_colors.nebula10, gui = "bold" },
+				b = { fg = embark_colors.space0, bg = embark_colors.nebula11 },
+			},
 			inactive = {
-				a = { fg = colors.fg, bg = colors.bg },
-				b = { fg = colors.fg, bg = colors.bg },
-				c = { fg = colors.fg, bg = colors.bg },
-			},
-		}
-
-		local my_embark = {
-			normal = {
-				a = { fg = colors.fg, bg = colors.bg, gui = "bold" },
-				b = { fg = colors.fg, bg = colors.bg },
-				c = { fg = colors.fg, bg = colors.bg },
-			},
-			insert = { a = { fg = colors.fg, bg = colors.bg, gui = "bold" } },
-			visual = { a = { fg = colors.fg, bg = colors.bg, gui = "bold" } },
-			command = { a = { fg = colors.fg, bg = colors.bg, gui = "bold" } },
-			replace = { a = { fg = colors.fg, bg = colors.bg, gui = "bold" } },
-			inactive = {
-				a = { fg = colors.fg, bg = colors.bg },
-				b = { fg = colors.fg, bg = colors.bg },
-				c = { fg = colors.fg, bg = colors.bg },
+				a = { fg = embark_colors.space4, bg = embark_colors.space1, gui = "bold" },
+				b = { fg = embark_colors.space4, bg = embark_colors.space1 },
+				c = { fg = embark_colors.space4, bg = embark_colors.space2 },
+				x = { fg = embark_colors.space0, bg = embark_colors.purple },
 			},
 		}
 
@@ -126,7 +162,7 @@ return {
 			options = {
 				icons_enabled = true,
 				-- theme = "embark",
-				theme = my_embark,
+				theme = embark,
 				component_separators = "",
 				section_separators = { left = "", right = " " },
 				-- section_separators = { left = "", right = "" },
@@ -157,8 +193,8 @@ return {
 		require("lualine").setup(opts)
 
 		vim.cmd([[
-      hi StatusLine guibg=NONE ctermbg=NONE
-      hi StatusLineNC guibg=NONE ctermbg=NONE
-    ]])
+		    hi StatusLine guibg=NONE ctermbg=NONE
+		    hi StatusLineNC guibg=NONE ctermbg=NONE
+		  ]])
 	end,
 }
