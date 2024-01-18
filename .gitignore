@@ -1,4 +1,4 @@
-# Ignore 
+# Ignore
 */*
 *.*
 
@@ -9,6 +9,7 @@
 
 # Allow directories
 !nvim/**/*
+!btop/**/*
 !alacritty/**/*
 !wezterm/**/*
 !tmux/**/*
