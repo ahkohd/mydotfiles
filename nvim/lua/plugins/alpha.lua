@@ -183,8 +183,7 @@ return {
 			-- Layout
 			theme.config.layout = {
 				{ type = "padding", val = 4 },
-				get_header({ headers.cat }),
-				-- get_header({ headers.neovim, headers.opa, headers.cat }),
+				get_header({ headers.neovim, headers.opa, headers.cat }),
 				{ type = "padding", val = 1 },
 				get_tools(),
 				{ type = "padding", val = 2 },
