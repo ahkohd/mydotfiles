@@ -24,11 +24,17 @@ return {
 			["<space>d"] = {
 				name = "Diagnostics",
 			},
-			["<leader>g"] = {
+			["<space>g"] = {
 				name = "Git mode",
 			},
-			["<leader>b"] = {
-				name = "Debugging",
+			["<space>b"] = {
+				name = "Debug",
+			},
+			["<space>t"] = {
+				name = "Tests",
+			},
+			["<space>x"] = {
+				name = "Sessions",
 			},
 		})
 	end,

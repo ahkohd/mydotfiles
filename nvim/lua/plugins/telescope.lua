@@ -11,7 +11,6 @@ return {
 		},
 		{ "<space>r", "<cmd>lua require('telescope.builtin').live_grep()<cr>", desc = "Live grep" },
 		{ "<space>m", "<cmd>lua require('telescope.builtin').marks()<cr>", desc = "Search marks" },
-		{ "<space>p", "<cmd>Telescope neoclip<cr>", desc = "Search jumplist" },
 		{ "<space>j", "<cmd>lua require('telescope.builtin').jumplist()<cr>", desc = "Search jumplist" },
 		{ "<space>\\", "<cmd>Telescope buffers<cr>", desc = "Search buffers" },
 		{ "<space><space>", "<cmd>Telescope help_tags<cr>", desc = "Help tags" },
@@ -22,6 +21,7 @@ return {
 		"nvim-telescope/telescope-ui-select.nvim",
 		"ThePrimeagen/harpoon",
 		"nvim-telescope/telescope-project.nvim",
+		"olimorris/persisted.nvim",
 	},
 	event = "VeryLazy",
 	config = function()
@@ -32,6 +32,7 @@ return {
 		telescope.load_extension("ui-select")
 		telescope.load_extension("neoclip")
 		telescope.load_extension("harpoon")
+		telescope.load_extension("persisted")
 		-- telescope.load_extension("noice")
 
 		---@diagnostic disable-next-line: undefined-field

@@ -3,7 +3,6 @@
 return {
 	"nvim-pack/nvim-spectre",
 	keys = {
-		{ "<space>s", "<cmd>lua require('spectre').toggle()<CR>", desc = "Find & Replace" },
 		{ "<space>ss", "<cmd>lua require('spectre').toggle()<CR>", desc = "Find & Replace" },
 		{
 			"<space>sw",

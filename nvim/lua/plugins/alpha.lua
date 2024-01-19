@@ -18,9 +18,9 @@ return {
 
 			local function apply_gradient_hl(text)
 				-- no clown fiesta
-				local gradient = require("core.ui.alpha.utils").create_gradient("#E1E1E1", "#202020", #text)
-				-- flouromachine - delta
-				-- local gradient = require("core.ui.alpha.utils").create_gradient("#F0FEA4", "#654D7C", #text)
+				-- local gradient = require("core.ui.alpha.utils").create_gradient("#E1E1E1", "#202020", #text)
+				-- embark
+				local gradient = require("core.ui.alpha.utils").create_gradient("#91ddff", "#cbe3e7", #text)
 
 				local lines = {}
 				for i, line in ipairs(text) do
@@ -78,15 +78,20 @@ return {
 			-- Links / tools
 			local function get_tools()
 				local tbl = {
-					{ type = "text", val = "Tools", opts = { hl = "SpecialComment", position = "center" } },
+					{ type = "text", val = "˶ᵔ ᵕ ᵔ˶", opts = { hl = "SpecialComment", position = "center" } },
 					{
 						type = "group",
 						val = {
-							dashboard.button("l", "󰒲 Lazy", "<cmd>Lazy<CR>"),
-							dashboard.button("m", " Mason", "<cmd>Mason<CR>"),
-							dashboard.button("o", " Obsidian", "<cmd>lua require('core.utils.obsidian').open()<CR>"),
-							dashboard.button("t", " Telescope", "<cmd>Telescope<CR>"),
-							dashboard.button("p", " Projects", "<cmd>Telescope project<CR>"),
+							dashboard.button("p", " Open project", "<cmd>Telescope project<CR>"),
+							dashboard.button("x", " Recent sessions", "<cmd>Telescope persisted<CR>"),
+							dashboard.button(
+								"o",
+								" Take notes",
+								"<cmd>lua require('core.utils.obsidian').open()<CR>"
+							),
+							dashboard.button("l", " Extensions...", "<cmd>Lazy<CR>"),
+							dashboard.button("m", " Packages...", "<cmd>Mason<CR>"),
+							dashboard.button("q", " Quit", "<cmd>qa!<CR>"),
 						},
 						position = "center",
 					},
