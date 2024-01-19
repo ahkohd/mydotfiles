@@ -13,6 +13,11 @@ return {
 			"<cmd>SessionSave<cr>",
 			desc = "Save the current session",
 		},
+		{
+			"<space>xd",
+			"<cmd>SessionDelete<cr>",
+			desc = "Delete the current session",
+		},
 	},
 	config = function()
 		require("persisted").setup({
